@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% if object %}Atualizar{% else %}Criar{% endif %} tarefa</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+        <h1>{% if object %}Atualizar{% else %}Criar{% endif %} tarefa</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="update">Salvar</button>
+        </form>
+        <a href="{% url 'todo_list' %}" class="create">Cancelar</a>
+    </body>
+</html>

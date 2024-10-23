@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deletar tarefa</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+        <h1>Deletar tarefa</h1>
+        <p>Você tem certeza que deseja deletar a tarefa?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="delete">Deletar</button>
+        </form>
+    <a href="{% url 'todo_list' %}" class="create">Cancelar</a>
+    </body>
+</html>

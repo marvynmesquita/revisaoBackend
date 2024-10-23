@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <h1>Lista de tarefas</h1>
+    <ul>
+        {% for todo in todo_list %}
+            <li>{{ todo.title }} - <a href="{% url 'todo_update' todo.pk %}" class="update">Editar</a> | <a href="{% url 'todo_delete' todo.pk %}" class="delete">Deletar</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'todo_create' %}" class="create">Criar nova tarefa</a>
+</body>
+</html>

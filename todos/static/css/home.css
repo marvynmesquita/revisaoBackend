@@ -1,0 +1,90 @@
+body{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    h1 {
+        width: 100%;
+        background: rgb(161,17,145);
+        background: linear-gradient(180deg, rgba(161,17,145,1) 0%, rgba(217,0,129,1) 100%);
+        top: 0;
+        text-align: center;
+    }
+    ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5rem 0;
+        li{
+            list-style-type: none;
+            color: white;
+            transition: color 0.3s ease;
+            width: 100%;
+            padding: 1.5rem;
+            text-align: center;
+            &:hover{
+                color: rgb(217,0,129);
+                background: rgb(181,166,201);
+                background: linear-gradient(180deg, rgba(181,166,201,1) 0%, rgba(110,88,139,1) 100%);
+            }
+        }
+        a{
+                text-decoration: none;
+                color: white;
+                transition: color 0.3s ease;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                &.update{
+                    background: rgb(82,166,117);
+                    background: linear-gradient(180deg, rgba(82,166,117,1) 0%, rgba(138,201,38,1) 100%);
+                    &:hover{
+                        background: rgb(138,201,38);
+                        background: linear-gradient(180deg, rgba(138,201,38,1) 0%, rgba(82,166,117,1) 100%);
+                    }
+                }
+                &.delete{
+                    background: rgb(166,82,82);
+                    background: linear-gradient(180deg, rgba(166,82,82,1) 0%, rgba(201,38,38,1) 100%);
+                    &:hover{
+                        background: rgb(201,38,38);
+                        background: linear-gradient(180deg, rgba(201,38,38,1) 0%, rgba(166,82,82,1) 100%);
+                    }
+                }
+                &.create{
+                    background: rgb(25,130,196);
+                    background: linear-gradient(180deg, rgba(25,130,196,1) 0%, rgba(66,103,172,1) 100%);
+                }
+            }
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        &.update{
+            background: rgb(82,166,117);
+            background: linear-gradient(180deg, rgba(82,166,117,1) 0%, rgba(138,201,38,1) 100%);
+            &:hover{
+                background: rgb(138,201,38);
+                background: linear-gradient(180deg, rgba(138,201,38,1) 0%, rgba(82,166,117,1) 100%);
+            }
+        }
+        &.delete{
+            background: rgb(166,82,82);
+            background: linear-gradient(180deg, rgba(166,82,82,1) 0%, rgba(201,38,38,1) 100%);
+            &:hover{
+                background: rgb(201,38,38);
+                background: linear-gradient(180deg, rgba(201,38,38,1) 0%, rgba(166,82,82,1) 100%);
+            }
+        }
+        &.create{
+            background: rgb(25,130,196);
+            background: linear-gradient(180deg, rgba(25,130,196,1) 0%, rgba(66,103,172,1) 100%);
+        }
+    }
+}
